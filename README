@@ -37,7 +37,7 @@ wget "https://atlas.hashicorp.com/debian/boxes/jessie64/versions/8.4.0/providers
 vagrant box add jessie64 virtualbox.box
 
 
-6. Vagrant will create ".vagrant" dir in your home directory. Edit file "/YOUR_HOME_DIR/.vagrant.d/boxes/jessie64/virtualbox/Vagrant" and uncomment following lines or You can simple delete file. 
+6. Vagrant will create ".vagrant" dir in your home directory. Edit file "/YOUR_HOME_DIR/.vagrant.d/boxes/jessie64/virtualbox/Vagrant" and comment following lines. 
 
 #Vagrant.configure("2") do |config|
 #  config.vm.synced_folder \
@@ -67,10 +67,6 @@ cp your_image.jpg static/
 
 - provision_database.sh
 
-- provision_motd.sh
-
-- motd.sh
-
 
 10. Edit Vagrantfile and make a following changes, leave everything else by default
 
@@ -94,10 +90,10 @@ config.vm.network :forwarded_port, guest: 80, host: 8080
 
 vagrant plugin install vagrant-vbguest
 
-vagrant up
-
 
 12. Start/reload Vagrant VM with provision
+
+vagrant up
 
 vagrant reload --provision
 
@@ -107,12 +103,4 @@ vagrant reload --provision
 - http://localhost:8080
 
 - http://localhost:8080/static/your_image.jpg
-
-
-14. Login over ssh to VM to get display information from motd.sh script
-
-vagrant ssh
-
-
-
 
