@@ -1,2 +1,2 @@
 # Vagrant project for atlantbh
-Author: eldoradoh
+Use Vagrant to spin up and provision the Virtual Machine
