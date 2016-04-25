@@ -22,29 +22,22 @@ apt-get install virtualbox
 apt-get install vagrant
 
 
-3. Install Vagrant plugin (automatically installs the host's VirtualBox Guest Additions on the guest system for synced/shared folder)
-
-vagrant plugin install vagrant-vbguest
-
-vagrant reload
-
-
-4. Create directory to be a Vagrant environment
+3. Create directory to be a Vagrant environment
 
 mkdir VAGRANT_JESSIE64 && cd VAGRANT_JESSIE64
 
 
-5. Get Debian VM box for VirtualBox from "https://atlas.hashicorp.com/boxes/search", saved file will be named as "virtualbox.box"
+4. Get Debian VM box for VirtualBox from "https://atlas.hashicorp.com/boxes/search", saved file will be named as "virtualbox.box"
 
 wget "https://atlas.hashicorp.com/debian/boxes/jessie64/versions/8.4.0/providers/virtualbox.box"
 
 
-6. Add box localy to Vagrant file
+5. Add box localy to Vagrant file
 
 vagrant box add jessie64 virtualbox.box
 
 
-7. Vagrant will create ".vagrant" dir in your home directory. Edit file "/YOUR_HOME_DIR/.vagrant.d/boxes/jessie64/virtualbox/Vagrant" and uncomment following lines or You can simple delete file. 
+6. Vagrant will create ".vagrant" dir in your home directory. Edit file "/YOUR_HOME_DIR/.vagrant.d/boxes/jessie64/virtualbox/Vagrant" and uncomment following lines or You can simple delete file. 
 
 #Vagrant.configure("2") do |config|
 #  config.vm.synced_folder \
@@ -54,19 +47,19 @@ vagrant box add jessie64 virtualbox.box
 #end
 
 
-8. Initializes the VAGRANT_JESSIE64 directory to be a Vagrant environment by creating an initial Vagrantfile
+7. Initializes the VAGRANT_JESSIE64 directory to be a Vagrant environment by creating an initial Vagrantfile
 
 vagrant init jessie64
 
 
-9. Create directory "static" inside VAGRANT_JESSIE64 directory for testing of serving static files, put some static file in "static" directory
+8. Create directory "static" inside VAGRANT_JESSIE64 directory for testing of serving static files, put some static file in "static" directory
 
 mkdir static
 
 cp your_image.jpg static/
 
 
-10. Put following scripts in VAGRANT_JESSIE64 directory
+9. Put following scripts in VAGRANT_JESSIE64 directory
 
 - provision_system_update.sh
 
@@ -79,7 +72,7 @@ cp your_image.jpg static/
 - motd.sh
 
 
-11. Edit Vagrantfile and make a following changes, leave everything else by default
+10. Edit Vagrantfile and make a following changes, leave everything else by default
 
 # Set locale for mongodb functionality
 ENV['LC_ALL']="C"
@@ -95,6 +88,13 @@ config.vm.provision :shell, path: "provision_http.sh"
 
 # Forward port 8080 on host machine to port 80 on guest machine
 config.vm.network :forwarded_port, guest: 80, host: 8080
+
+
+11. Install Vagrant plugin (automatically installs the host's VirtualBox Guest Additions on the guest system for synced/shared folder)
+
+vagrant plugin install vagrant-vbguest
+
+vagrant reload
 
 
 12. Start/reload Vagrant VM with provision
