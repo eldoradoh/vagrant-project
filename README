@@ -1,7 +1,7 @@
 
-
-MANUAL FOR SPIN UP AND PROVISION THE VIRTUAL MACHINE WITH VAGRANT:
-
+#######################################################################
+## MANUAL FOR SPIN UP AND PROVISION THE VIRTUAL MACHINE WITH VAGRANT ##
+#######################################################################
 
 
 NOTE:
@@ -10,6 +10,7 @@ NOTE:
 	- Everything is done from terminal.
 	- Every bash script contains comments
 
+-----------------------------------------------------------------------
 
 
 1. Install VirtualBox (version: 4.3.36_Ubuntur105129)
