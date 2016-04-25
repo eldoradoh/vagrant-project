@@ -17,6 +17,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   
   config.vm.provision :shell, path: "provision_system_update.sh"
   config.vm.provision :shell, path: "provision_database.sh"
+  config.vm.provision :shell, path: "provision_motd.sh"
   config.vm.provision :shell, path: "provision_http.sh"
   
   # The url from where the 'config.vm.box' box will be fetched if it
