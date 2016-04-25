@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Provision the message of the day script. Script will display some basic info about system when user logged in
+
 motd_script_dir="/vagrant/"
 motd_script_name="motd.sh"
 
