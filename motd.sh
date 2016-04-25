@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Script name: motd.sh
+# Author: Eldoradoh
+# Date: Mart-2016
+# Version: 2.0
 
 RED='\033[01;31m'
 RED_BACK='\033[01;41m'
