@@ -39,7 +39,7 @@ wget "https://atlas.hashicorp.com/debian/boxes/jessie64/versions/8.4.0/providers
 
 6. Add box localy to Vagrant file
 
-vagrant box add debian-jessie64 virtualbox.box
+vagrant box add jessie64 virtualbox.box
 
 
 7. Vagrant will create ".vagrant" dir in your home directory. Edit file "/YOUR_HOME_DIR/.vagrant.d/boxes/jessie64/virtualbox/Vagrant" and uncomment following lines or You can simple delete file. 
@@ -54,7 +54,7 @@ vagrant box add debian-jessie64 virtualbox.box
 
 8. Initializes the VAGRANT_JESSIE64 directory to be a Vagrant environment by creating an initial Vagrantfile
 
-vagrant init debian-jessie64
+vagrant init jessie64
 
 
 9. Create directory "static" inside VAGRANT_JESSIE64 directory for testing of serving static files, put some static file in "static" directory
