@@ -3,7 +3,6 @@
 ## MANUAL FOR SPIN UP AND PROVISION THE VIRTUAL MACHINE WITH VAGRANT ##
 #######################################################################
 
-
 NOTE:
 	- I'm using Ubuntu 14.04 LTS.
 	- Provision of the VM is done with shell scripting.
