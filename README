@@ -72,6 +72,10 @@ cp your_image.jpg static/
 
 - provision_database.sh
 
+- provision_motd.sh
+
+- motd.sh
+
 
 11. Edit Vagrantfile and make a following changes, leave everything else by default
 
@@ -107,6 +111,9 @@ vagrant reload --provision
 - http://localhost:8080/static/your_image.jpg
 
 
+14. Login over ssh to VM to get display information from motd.sh script
+
+vagrant ssh
 
 
 
