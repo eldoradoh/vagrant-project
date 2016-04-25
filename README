@@ -94,14 +94,10 @@ config.vm.network :forwarded_port, guest: 80, host: 8080
 
 vagrant plugin install vagrant-vbguest
 
-vagrant reload
+vagrant up
 
 
 12. Start/reload Vagrant VM with provision
-
-vagrant up --provision
-
-or
 
 vagrant reload --provision
 
