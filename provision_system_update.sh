@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 
-# Update and upgrade debian system
+# Update debian system
 apt-get update -y
-apt-get upgrade -y
