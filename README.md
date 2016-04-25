@@ -1,2 +1,2 @@
-# vagrant-project
+# Vagrant project by eldoradoh
 Vagrant project for atlantbh
